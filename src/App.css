@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.portfolio {
+  font-family: "Inter", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.portfolio {
+  display: grid;
+
+  margin: auto;
+
+  width: 80vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.grid {
+  display: grid;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header2 {
+  font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tag-line {
+  color: #828282;
+  font-size: 24px;
 }
+
+.intro-grid {
+  height: 100vh;
+  
+  .intro-block {
+      display: flex;
+      
+      .info {
+          font-size: 24px;
+      
+          padding-right: 10%;
+
+          .intro-heading {
+              font-size: 64px;
+              color: #575151;
+            }
+        }
+
+      .portrait > img {
+        border-radius: 85%;
+        }
+    }
+}
+
+.showcase-grid {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
+
+  padding-top: 5%;
+
+  height: 70vh;
+}
+
