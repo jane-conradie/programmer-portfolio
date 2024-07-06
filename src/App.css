@@ -2,23 +2,24 @@
 
 .portfolio {
   font-family: "Inter", sans-serif;
-}
 
-.portfolio {
   display: grid;
-
   margin: auto;
 
   width: 80vw;
 }
 
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
 .grid {
   display: grid;
   align-items: center;
-}
-
-.header2 {
-  font-size: 40px;
 }
 
 .tag-line {
@@ -48,16 +49,3 @@
         }
     }
 }
-
-.showcase-grid {
-  display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 35px;
-    grid-row-gap: 35px;
-
-  padding-top: 5%;
-
-  height: 70vh;
-}
-

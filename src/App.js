@@ -3,42 +3,28 @@ import "./App.css";
 import portrait from "./images/portrait.png";
 import portrait_smiling from "./images/portrait_smiling.png";
 
+import { Navbar, Grid, Skills } from "./components";
+
+import { projects as gameDevelopmentProjects } from "./data/game_development_projects";
+import { projects as webDevelopmentProjects } from "./data/web_development_projects";
+import { skills } from "./data/skills";
+
+// import { Unity, useUnityContext } from "react-unity-webgl";
+
 function App() {
-  var projects = [
-    {
-      projectNumber: 1,
-      imageSource: require("./images/project1.png"),
-      name: "",
-      description: "",
-    },
-    {
-      projectNumber: 2,
-      imageSource: require("./images/project1.png"),
-      name: "",
-      description: "",
-    },
-    {
-      projectNumber: 3,
-      imageSource: require("./images/project1.png"),
-      name: "",
-      description: "",
-    },
-    {
-      projectNumber: 4,
-      imageSource: require("./images/project1.png"),
-      name: "",
-      description: "",
-    },
-    {
-      projectNumber: 5,
-      imageSource: require("./images/project1.png"),
-      name: "",
-      description: "",
-    },
-  ];
+  // const { unityProvider } = useUnityContext({
+  //   loaderUrl: "buildUnity/Sloper/Build/sloper.loader.js",
+  //   dataUrl: "buildUnity/Sloper/Build/sloper.data",
+  //   frameworkUrl: "buildUnity/Sloper/Build/sloper.framework.js",
+  //   codeUrl: "buildUnity/Sloper/Build/sloper.wasm",
+  //   webglContextAttributes: {
+  //     preserveDrawingBuffer: true,
+  //   },
+  // });
 
   return (
     <div className="portfolio">
+      <Navbar />
       <div className="intro-grid grid">
         <div className="intro-block">
           <div className="info">
@@ -57,28 +43,40 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="game-dev-grid grid">
-        <div className="info">
+      <div className="projects-showcase">
+        <div className="game-development">
           <h2 className="header2">Game development</h2>
           <div className="tag-line">
             The following are guided projects that I have made as I have been
             learning game development
           </div>
-          <div className="showcase-grid">
-            {projects.map((element) => {
-              return (
-                <div className={"project" + element.projectNumber}>
-                  <img src={element.imageSource} />
-                  {/* thumbnail
-            below shows on hover
-            project name
-            description */}
-                </div>
-              );
-            })}
+          <Grid projects={gameDevelopmentProjects} />
+        </div>
+        <div className="web-development">
+          <h2 className="header2">Web development</h2>
+          <div className="tag-line">
+            The following are projects to showcase my web development skill
           </div>
+          <Grid projects={webDevelopmentProjects} />
         </div>
       </div>
+      <div className="skills">
+        <h2 className="header2">Skills</h2>
+        <Skills skills={skills} />
+        {/* <div className="game-development">
+          <h2 className="header2">Game development</h2>
+          <div className="tag-line">
+            The following are guided projects that I have made as I have been
+            learning game development
+          </div>
+        </div> */}
+      </div>
+      {/* <div className="grid game">
+        <Unity
+          unityProvider={unityProvider}
+          style={{ width: 800, height: 600 }}
+        />
+      </div> */}
     </div>
   );
 }
