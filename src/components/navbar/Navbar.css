@@ -40,6 +40,11 @@
             padding: 0 5px;
             
             cursor: pointer;
+
+            > a > img {
+                    width: 24px;
+                    height: 24px;
+                }
         }
     }
 }

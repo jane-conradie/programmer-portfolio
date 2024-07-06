@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px 0 20px;
+
+    border-top: 1px solid #E6E6E6;
+
+    .information {
+        text-align: center;
+    }
+
+    .name {
+        color: #f33fa5;
+        font-weight: 600;
+    }
+
+    .links {
+        padding-top: 20px;
+
+        > a {
+            padding: 0 5px;
+            
+            > img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

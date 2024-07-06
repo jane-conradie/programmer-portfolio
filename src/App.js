@@ -3,7 +3,7 @@ import "./App.css";
 import portrait from "./images/portrait.png";
 import portrait_smiling from "./images/portrait_smiling.png";
 
-import { Navbar, Grid, Skills } from "./components";
+import { Navbar, Grid, Skills, Footer } from "./components";
 
 import { projects as gameDevelopmentProjects } from "./data/game_development_projects";
 import { projects as webDevelopmentProjects } from "./data/web_development_projects";
@@ -63,14 +63,8 @@ function App() {
       <div className="skills">
         <h2 className="header2">Skills</h2>
         <Skills skills={skills} />
-        {/* <div className="game-development">
-          <h2 className="header2">Game development</h2>
-          <div className="tag-line">
-            The following are guided projects that I have made as I have been
-            learning game development
-          </div>
-        </div> */}
       </div>
+      <Footer />
       {/* <div className="grid game">
         <Unity
           unityProvider={unityProvider}

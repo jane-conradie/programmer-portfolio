@@ -3,6 +3,7 @@ import './Navbar.css';
 import portrait_smiling from "./../../images/portrait_smiling.png";
 import linkedin from './../../images/linkedin.svg';
 import github from './../../images/github.svg';
+import mail from './../../images/mail.svg';
 
 function Navbar()
 {
@@ -22,6 +23,11 @@ function Navbar()
                 <div>
                     <a href="https://github.com/jane-conradie" target='_blank' rel='noreferrer'>
                         <img src={github} alt="github"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="mailto:jconradie1998@gmail.com">
+                        <img src={mail} alt="mail"/>
                     </a>
                 </div>
             </div>

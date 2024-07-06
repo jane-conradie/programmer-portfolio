@@ -2,8 +2,6 @@ import './Grid.css';
 
 function Grid({ projects })
 {
-    console.log(projects);
-
     return <div className="grid">
         <div className="showcase-grid">
             {projects?.map((element) => {
