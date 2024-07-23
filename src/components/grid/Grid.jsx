@@ -6,7 +6,7 @@ function Grid({ projects })
         <div className="showcase-grid">
             {projects?.map((element) => {
             return (
-                <div className={"project" + element.projectNumber}>
+                <div key={"project" + element.projectNumber} className='card'>
                     <img src={element.imageSource} />
                   {/* thumbnail
             below shows on hover

@@ -1,50 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-.portfolio {
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.wrapper {
   font-family: "Inter", sans-serif;
 
-  margin: auto;
+  padding: 2rem;
 
-  width: 80vw;
+  @media (min-height: 844px) {
+    padding: 3rem;
+  }
+
+  @media (min-height: 1023px) {
+    padding: 4rem;
+  }
+
+  @media (orientation: landscape) {
+    padding: 4rem;
+  }
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 4rem;
+  margin: 0;
+
+  @media (min-height: 844px) {
+    font-size: 5rem;
+  }
+
+  @media (min-height: 1023px) {
+    font-size: 7rem;
+  }
 }
 
-h3 {
-  font-size: 28px;
-}
+.intro {
+  height: calc(100vh - 4rem);
 
-.grid {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-}
+  justify-content: center;
 
-.tag-line {
-  color: #828282;
-  font-size: 24px;
-}
+  .info {
+    text-align: center;
+  }
 
-.intro-grid {
-  height: 100vh;
-  
-  .intro-block {
-      display: flex;
-      
-      .info {
-          font-size: 24px;
-      
-          padding-right: 10%;
-
-          .intro-heading {
-              font-size: 64px;
-              color: #575151;
-            }
-        }
-
-      .portrait > img {
-        border-radius: 85%;
-        }
+  .text {
+    > p {
+      font-size: 1.5rem;
     }
+  }
+
+  .portrait {
+    > img {
+      height: 14rem;
+
+      margin-top: 2rem;
+    }
+  }
+
+  @media (min-height: 844px) {
+    height: calc(100vh - 6rem);
+
+    .text {
+      > p {
+        font-size: 2.2rem;
+      }
+    }
+
+    .portrait {
+      > img {
+        height: 16rem;
+      }
+    }
+  }
+
+  @media (min-height: 1023px) {
+    max-height: calc(100vh - 8rem);
+
+    .text {
+      > p {
+        font-size: 3rem;
+      }
+    }
+
+    .portrait {
+      > img {
+        height: 20rem;
+      }
+    }
+  }
+
+  @media (orientation: landscape) {
+    height: calc(100vh - 8rem);
+    width: 90%;
+    margin: auto;
+    flex-direction: row;
+
+    .info {
+      text-align: left;
+      padding: 3rem;
+    }
+  }
+
+  @media (orientation: landscape) and (min-width: 1300px) {
+    width: 80%;
+  }
+}
+
+.footer {
+  margin-top: 4rem;
 }

@@ -1,11 +1,25 @@
 .showcase-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 35px;
-    grid-row-gap: 35px;
-
-    padding-top: 5%;
+    gap: 2rem;
+    
+    padding-top: 4rem;
 
     height: 70vh;
+
+    margin: 0 auto;
+
+    .card {
+
+        > img {
+            width: 10rem;
+        }
+    }
+
+    @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 900px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

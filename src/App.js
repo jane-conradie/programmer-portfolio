@@ -23,46 +23,27 @@ function App() {
   // });
 
   return (
-    <div className="portfolio">
-      <Navbar />
-      <div className="intro-grid grid">
-        <div className="intro-block">
-          <div className="info">
-            <h1 className="intro-heading header">Hi!</h1>
-            <div>
-              I’m <b>Jané Conradie</b>, a programmer with a passion in coding
-              games, and websites.
-            </div>
+    <div className="wrapper">
+      <div className="intro">
+        <div className="info">
+          <div className="heading">
+            <h2>Hi!</h2>
           </div>
-          <div className="portrait">
-            <img
-              src={portrait}
-              onMouseOver={(e) => (e.currentTarget.src = portrait_smiling)}
-              onMouseOut={(e) => (e.currentTarget.src = portrait)}
-            />
+          <div className="text">
+            <p>
+              I’m Jané Conradie, a programmer with a passion in coding games,
+              and websites.
+            </p>
           </div>
         </div>
-      </div>
-      <div className="projects-showcase">
-        <div className="game-development">
-          <h2 className="header2">Game development</h2>
-          <div className="tag-line">
-            The following are guided projects that I have made as I have been
-            learning game development
-          </div>
-          <Grid projects={gameDevelopmentProjects} />
+        <div className="portrait">
+          <img
+            src={portrait}
+            onMouseOver={(e) => (e.currentTarget.src = portrait_smiling)}
+            onMouseLeave={(e) => (e.currentTarget.src = portrait)}
+            alt=""
+          />
         </div>
-        <div className="web-development">
-          <h2 className="header2">Web development</h2>
-          <div className="tag-line">
-            The following are projects to showcase my web development skill
-          </div>
-          <Grid projects={webDevelopmentProjects} />
-        </div>
-      </div>
-      <div className="skills">
-        <h2 className="header2">Skills</h2>
-        <Skills skills={skills} />
       </div>
       <Footer />
       {/* <div className="grid game">

@@ -1,7 +1,8 @@
 .navbar 
 {
-    position: fixed;
+    position: absolute;
     left: 0;
+    top: 0;
 
     display: flex;
     flex-direction: row;
@@ -9,8 +10,6 @@
 
     align-items: center;
     justify-content: space-between;
-
-    width: 100vw !important;
 
     .avatar 
     {
@@ -26,26 +25,44 @@
 
     .left {
         padding: 10px 10px;
+
+        .information {
+                display: flex;
+                align-items: center;
+        
+                > div {
+                    padding: 0 5px;
+        
+                    cursor: pointer;
+        
+                    > a > img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
     }
 
     .right {
         padding: 10px 30px;
-    }
 
-    .information {
-        display: flex;
-        align-items: center;
-
-        > div {
-            padding: 0 5px;
-            
-            cursor: pointer;
-
-            > a > img {
-                    width: 24px;
-                    height: 24px;
+        .information {
+                display: flex;
+                align-items: center;
+        
+                > div {
+                    padding: 0 25px;
+        
+                    cursor: pointer;
                 }
+            }
+
+        .menu {
+            height: 2rem;
+            color: #1d101b;
         }
     }
+
+    
 }
 
